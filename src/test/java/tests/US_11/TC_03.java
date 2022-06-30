@@ -28,8 +28,7 @@ public class TC_03 {
         tlp.topUrunGosAyarlari.click();
 
         tlp.minOrderQuantyBox.clear();
-        tlp.minOrderQuantyBox.sendKeys("50");
-
+        tlp.minOrderQuantyBox.sendKeys("1");
 
         WebElement actualResult=tlp.minOrderQuantyBox;
         Assert.assertTrue(actualResult.isDisplayed());

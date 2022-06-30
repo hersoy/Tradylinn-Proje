@@ -11,7 +11,6 @@ public class TradylinnPage {
     public TradylinnPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
     @FindBy (xpath ="//a[@class='login inline-type']")
     public WebElement gitGirisYap;
 
@@ -92,6 +91,36 @@ public class TradylinnPage {
 
     @FindBy(xpath=("//*[text()='İndirmeler']"))
     public WebElement indirmelerButon;
+
+    @FindBy(xpath=("//*[text()='Adres']"))
+    public WebElement adresButon;
+
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/div[3]/div[1]/div")
+    public List<WebElement> faturaAdresi;
+
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/div[3]/div[2]/div")
+    public List<WebElement> gonderimAdresi;
+
+    @FindBy(xpath=("//a[text()='Hesap detayları']"))
+    public WebElement hesapDetaylariButon;
+
+    @FindBy(xpath ="//input[@id='account_first_name']")
+    public WebElement hesapDetaylariAd;
+
+    @FindBy(xpath ="//input[@id='account_last_name']")
+    public WebElement hesapDetaylariSoyad;
+
+    @FindBy(xpath ="//input[@id='account_display_name']")
+    public WebElement hesapDetaylariGorunenAd;
+
+    @FindBy(xpath ="//input[@id='account_email']")
+    public WebElement hesapDetaylariEmail;
+
+    @FindBy(xpath = "//button[@name='save_account_details']")
+    public WebElement degisiklileriKaydetButonu;
+
+    @FindBy(xpath = "//div[@class='woocommerce-message alert alert-simple alert-icon alert-close-top alert-success']")
+    public WebElement basariylaKaydedildiYazisi;
 
 
 

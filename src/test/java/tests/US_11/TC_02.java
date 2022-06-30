@@ -30,7 +30,6 @@ public class TC_02 {
         tlp.unitsPerPieceBox.clear();
         tlp.unitsPerPieceBox.sendKeys("100");
 
-
         WebElement actualResult=tlp.unitsPerPieceBox;
         Assert.assertTrue(actualResult.isDisplayed());
 

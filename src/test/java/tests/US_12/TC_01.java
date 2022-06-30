@@ -1,6 +1,7 @@
 package tests.US_12;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TradylinnPage;
 import utilities.ReusableMethods;
@@ -15,16 +16,21 @@ public class TC_01 {
         TradylinnPage tlp = new TradylinnPage();
 
         ReusableMethods.tradyGiris();
-        Thread.sleep(3000);
+        Thread.sleep(9000);
 
         tlp.hesabimButon.click();
+        Thread.sleep(9000);
         tlp.siparisButon.click();
-        List<String> siparisList=new ArrayList<>();
 
+        List<String> siparisList=new ArrayList<>();
         for (WebElement each:tlp.siparisler
              ) {
             siparisList.add(each.getText());
         }
         System.out.println("siparisList = " + siparisList);
+
+        Assert.assertTrue(!siparisList.isEmpty());
+
+
     }
 }
