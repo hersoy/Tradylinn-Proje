@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+<<<<<<< HEAD
 import java.util.List;
 
 public class TradylinnPage {
@@ -46,6 +47,13 @@ public class TradylinnPage {
 
     @FindBy (xpath = "//button[@name='login']")
     public WebElement girisEnter;
+=======
+public class TradylinnPage {
+    public TradylinnPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
+
+    }
+>>>>>>> 2ffa3ec3706a1fb4b372111882ac010eefa09774
 
     @FindBy(xpath = "//*[@id='menu-item-1074']")
     public WebElement hesabimButon;
@@ -80,6 +88,7 @@ public class TradylinnPage {
     @FindBy(xpath = "//input[@id='minorderqtytr']")
     public WebElement minOrderQuantyBox;
 
+<<<<<<< HEAD
     @FindBy(xpath = "//tr[@class='woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order']")
     public List<WebElement> siparisler;
 
@@ -135,3 +144,7 @@ public class TradylinnPage {
 
 
 
+=======
+
+}
+>>>>>>> 2ffa3ec3706a1fb4b372111882ac010eefa09774
